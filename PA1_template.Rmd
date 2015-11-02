@@ -9,7 +9,7 @@ output:
 
 ## Loading and preprocessing the data
 
-```{r}
+```{r initialization}
 # load libs
 suppressPackageStartupMessages(library(dplyr))
 library(ggplot2)
@@ -26,6 +26,8 @@ is.weekend <- function(x)
     day_of_week %in% c("Sat", "Sun")
 }
 
+```
+```{r loading}
 # unzipping and reading of data
 unzip("activity.zip", overwrite = TRUE)
 my_data <- tbl_df(read.csv("activity.csv", stringsAsFactors = FALSE))
